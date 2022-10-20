@@ -17,7 +17,12 @@
    from: 'tucorreo@gmail.com',
    to: 'visualcenter.mkt@gmail.com',
    subject: 'Esta es una prueba',
-   text: mensaje
+   text: mensaje,
+   attachments: [
+    {   // utf-8 string as an attachment
+        filename: 'text1.txt',
+        content: 'hello world!'
+    }]
  };
  
  transporter.sendMail(mailOptions, function(error, info){
